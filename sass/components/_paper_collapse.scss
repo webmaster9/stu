@@ -1,0 +1,81 @@
+﻿.collapse-card {
+    background-color: #BAC2D4;
+    border-bottom: 1px solid #eee;
+    color: #98012E;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s
+}
+
+.collapse-card * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.collapse-card.active {
+    -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.18824);
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.18824);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.18824);
+    z-index: 200;
+    margin: 5px -5px
+}
+
+.collapse-card.active .collapse-card__heading:hover::after {
+    content: "\f066"
+}
+
+.collapse-card .collapse-card__heading:hover::after {
+    content: "\f065"
+}
+
+.collapse-card__heading {
+    cursor: pointer;
+    padding: 1rem;
+    position: relative
+}
+
+.collapse-card__heading:before,
+.collapse-card__heading:after {
+    content: " ";
+    display: table
+}
+
+.collapse-card__heading:after {
+    clear: both
+}
+
+.collapse-card__heading em {
+    color: #333
+}
+
+.collapse-card__heading span {
+    float: left
+}
+
+.collapse-card__heading::after {
+    color: #404040;
+    font-family: 'FontAwesome';
+    font-size: 1rem;
+    line-height: 2rem;
+    padding-left: .4rem;
+    position: absolute;
+    right: 1rem;
+    top: 1rem
+}
+
+.collapse-card__title {
+    /*font-size:1rem;line-height:2rem;*/
+    margin: 0 2rem 0 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.collapse-card__body {
+    padding: 1rem;
+    display: none;
+    color: #000;
+    background-color: #fff
+}

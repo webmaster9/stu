@@ -1,0 +1,43 @@
+.tab-content {
+		> .tab-pane {
+		margin-top: 30px;
+	}
+}
+
+.nav-tabs {
+    border-bottom: 1px solid $black;
+}
+
+.nav-tabs {
+	li  {
+		a {
+			padding: 10px 20px;
+			&:hover {	
+				border-top-right-radius: 0px;
+				border-top-left-radius: 0px;
+				border-bottom:  1px solid $black;
+			}
+		}
+	}
+}
+
+.nav-tabs {
+	li {
+		a {
+			text-decoration: none;
+			font-weight: 700;
+		}
+		&.active  {
+			a {
+				border-top-right-radius: 0px;
+				border-top-left-radius: 0px;
+				border: 1px solid $black;
+				border-bottom: 1px solid $white;
+				&:active, &:hover, &:focus {	
+					border: 1px solid $black;
+					border-bottom:  1px solid $white;
+				}
+			}
+		}
+	}
+}

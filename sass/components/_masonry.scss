@@ -1,0 +1,260 @@
+.mas-wrap {
+	background: url(../images/stu-feature-bg.jpg) no-repeat bottom center;
+	background-size: cover;
+	border-top: 5px solid #d6d6d6; 
+	border-bottom: 5px solid #d6d6d6; 
+	margin: 0;
+	@include media(">=md") {
+		margin: 45px 0 0 0;
+	}
+	.container {
+		padding-right: 0;
+		padding-left: 0;
+		@include media(">=sm") {
+			padding-right: 15px;
+			padding-left: 15px;
+		}
+		.row {
+			margin-right: 0;
+			margin-left: 0;
+			@include media(">=sm") {
+				margin-right: -15px;
+				margin-left: -15px;
+			}
+			.col-sm-12 {
+				padding-right: 0;
+				padding-left: 0;
+				@include media(">=sm") {
+					padding-right: 15px;
+					padding-left: 15px;
+				}
+			}
+		}
+	}
+	.mas-container { 
+		border-right: 5px solid #d6d6d6; 
+		border-left: 5px solid #d6d6d6; 
+		background-color: #d6d6d6; 
+		height: 100%; 
+		@include media(">=sm") {
+			height: 345px; 
+		}
+		@include media(">=md") {
+			height: 455px; 
+		}
+		@include media(">=lg") {
+			height: 555px;
+		}
+		.left {
+			float: none;
+			width: 100%;
+			height: 100%;
+			@include media(">=sm") {
+				float: left; 
+				width: 45%; 
+			}
+		}
+		.right {
+			float: none;
+			width: 100%;
+			height: 100%;
+			@include media(">=sm") {
+				float: left; 
+				width: 55%; 
+			}
+		}
+		.mas-item {     
+			background-color: #000; 
+			float: none;
+			@include media(">=sm") {
+				float: left; 
+			}
+			position: relative; 
+			&.iOne {
+				width: 100%; 
+				height: 100%; 
+				border-bottom: 5px solid #d6d6d6;
+				@include media(">=sm") {
+					border-right: 5px solid #d6d6d6;
+					border-bottom: none;
+				}
+			}
+			&.iTwo {
+				width: 100%; 
+				height: 60%; 
+				overflow: hidden;
+				border-bottom: 5px solid #d6d6d6;
+			}
+			&.iThree {
+				position: relative;
+				width: 100%; 
+				height: 40%;
+				overflow: hidden;
+				padding-top: 40%;
+				border-bottom: 5px solid #d6d6d6;
+				@include media(">=sm") {
+					width: 40%; 
+					height: 40%;
+					border-right: 5px solid #d6d6d6;
+					padding-top: 0;
+					border-bottom: none;
+				}
+				img {
+					position: absolute;
+					left: 0;
+					top: 0;
+					@include media(">=sm") {
+						position: relative;
+					}
+				}
+			}
+			&.iFour {
+				width: 100%; 
+				overflow: hidden;
+				padding-top: 40%;
+				@include media(">=sm") {
+					width: 60%; 
+					height: 40%;
+					padding-top: 0;
+				}
+				img {
+					position: absolute;
+					left: 0;
+					top: 0;
+					@include media(">=sm") {
+						position: relative;
+					}
+				}
+			}
+			img {
+				cursor: pointer;
+				display: block;
+				width: 100%;
+				max-width: 500%;
+				-webkit-transition: all 1s ease;
+				-moz-transition: all 1s ease;
+				-o-transition: all 1s ease;
+				-ms-transition: all 1s ease;
+				transition: all 1s ease;
+
+			}
+			&:hover, &:focus {
+				.stretch {
+					.featured-bg {
+						display: block;
+					}
+					.featured-content {
+						.featured-title {
+							bottom: 40px;
+							transition: all .5s ease;
+							color: $white;
+							.title-content {
+								color: $white;
+							}
+							.featured-title-bg {
+								opacity: 0;
+								transition: all .5s ease;
+							}
+						}
+					}
+				}
+				img {
+					transform:scale(1.1);
+					-ms-transform:scale(1.1);
+					-moz-transform:scale(1.1);
+					-webkit-transform:scale(1.1);
+					-o-transform:scale(1.1);
+				}
+			}
+			.stretch {
+				overflow: hidden;
+				display: block;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				.featured-bg {
+					display: block;
+					background: #011f42;
+					display: none;
+					height: 100%;
+					left: 0;
+					opacity: .8;
+					filter: alpha(opacity=80);
+					position: absolute;
+					top: 0;
+					width: 100%;
+					z-index: 1;
+				}
+				.featured-content {
+					display: block;
+					color: #fff;
+					right: 0;
+					position: absolute;
+					bottom: 0;
+					width: 100%;
+					padding: 0 0;
+					.featured-title {
+						color: $black;
+						font-size: 16px;
+						position: relative;
+						bottom: 20px;
+						left: 0;
+						letter-spacing: 1px;
+						padding: 15px 18px;
+						width: auto;
+						text-transform: uppercase;
+						line-height: 1;
+						z-index: 1;
+						font-weight: 600;
+						visibility: hidden;
+						float: none;
+						transition: all .5s ease;
+						@include media(">=sm") {
+							float: left; 
+						}
+						&:after {
+							font-family: "FontAwesome";
+							content: "\f054";
+							font-size: 60%;
+							margin: 0 0 0 6px;
+							vertical-align: 2px;
+							position: relative;
+							z-index: 10;
+						}
+						.title-content {
+							position: relative;
+							z-index: 10;
+							font-size: 12px;
+							color: $black;
+							@include media(">=xs") {
+								font-size: 16px;
+							}
+							.small {
+								display: none;
+								font-size: 10px;
+								@include media(">=sm") {
+									display: inline;
+								}
+							}
+						}
+						.featured-title-bg {
+							background: $white;
+							height: 100%;
+							position: absolute;
+							opacity: .8;
+							filter: alpha(opacity=50);
+							top: 0;
+							left: 0;
+							width: 100%;
+							transition: all .5s ease;
+						}
+					}
+				}
+			}
+		}
+	}	
+}
+
+
+

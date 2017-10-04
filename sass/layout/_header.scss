@@ -1,0 +1,31 @@
+.header {
+	position: relative;
+	font-family: $primary-font;
+	background-image: none;
+	background-color: $white;
+	height: auto;
+	z-index: 2000;
+	background-color: #002c63;
+	height: auto;
+    /*background: $brand-color-one url(../cms_images/wave-header.png) repeat-x top left;*/
+    color: #fff;
+	@include media(">=md") {
+		height: 105px;
+		}
+		.mob {
+			display: block;
+			padding-top: 20px;
+			width: 68px;
+			height: 50px;
+			float: right;
+			@include media(">=md") {
+				display: none;
+			}
+			.fa {
+				font-size: 30px;
+				color: $brand-color-two;
+			}
+		}
+}	
+
+

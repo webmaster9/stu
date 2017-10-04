@@ -1,0 +1,6 @@
+.flexrow {
+	display: block;
+	@include media(">=sm") {
+		display: flex;
+	}
+}

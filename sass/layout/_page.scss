@@ -1,0 +1,55 @@
+.page-content {
+	margin: 80px 0 65px 0;
+}
+
+.int-hdr {
+	width: 100%;
+}
+
+.donors {
+	-webkit-column-count: 1;
+	-moz-column-count: 1;
+	column-count: 1;
+	/*	-webkit-column-gap: 3em;
+	-moz-column-gap: 3em;
+	column-gap: 3em;*/
+	column-width: 100%;
+	@include media(">=sm") {
+		-webkit-column-count: 2;
+		-moz-column-count: 2;
+		column-count: 2;
+		column-width: 50%
+	}
+	@include media(">=md") {
+		-webkit-column-count: 3;
+		-moz-column-count: 3;
+		column-count: 3;
+		column-width: 33%
+	}
+}
+
+.board {
+	color: #002855;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	-webkit-column-count: 1;
+	-moz-column-count: 1;
+	column-count: 1;
+	column-width: 100%;
+	@include media(">=sm") {
+		-webkit-column-count: 2;
+		-moz-column-count: 2;
+		column-count: 2;
+		column-width: 50%
+	}
+	strong {
+		font-size: 18px;
+		em {
+			font-size: 16px;
+		}
+	}
+	li {
+		margin-bottom: 20px;
+	}
+}

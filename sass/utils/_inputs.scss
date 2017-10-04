@@ -1,0 +1,67 @@
+/* PROJECT COLORS */
+$brand-color-one: #0077c8;
+$brand-color-two: #da291c;
+$brand-color-three: #77c5fa;
+$brand-color-four: brown;
+$brand-color-burg: #98012e;
+$text-color: #333333;
+$link-color: #98012e;
+$link-color-hover: blue;
+$white: #fff;
+$black: #000;
+$xlt-grey: #efefef;
+$lt-grey: #84888b;
+$grey: #777;
+$dk-grey: #3e3f40;
+$xdk-grey: #252525;
+$black: #000000; 
+$rgb-black: "0,0,0" !default;
+$white: #ffffff; 
+$rgb-white: "255,255,255" !default;
+
+// Nav Colors
+$nav-color-one: #334b94;
+$nav-color-hover-one: rgba(0,0,0,.5);
+$nav-color-two: blue;
+$nav-color-three: purple;
+$nav-color-four: green;
+
+// Nav Colors
+$primary-button-color:$white;
+$primary-button-color-hover: #CCC;
+$nav-primary: $brand-color-one;
+$nav-bg: $white;
+$breadcrumb-color: #CCC;
+$breadcrumb-bg: #ac1f27;
+
+
+// First Level Subnav Colors
+$subnav-border-color: #777;
+$subnav-color: #777;
+$subnav-bg-color: $white;
+$subnav-color-hover: $white;
+$subnav-bg-color-hover: #777;
+
+
+// Second Level Subnav Colors
+$subnav-color2: $white;
+$subnav-bg-color2: #424242;
+$subnav-color-hover2: $white;
+$subnav-bg-color-hover2: $white;
+
+
+/* PROJECT FONTS */
+$primary-font: 'PT Sans', 'Helvetica', 'Arial', sans-serif !default;
+$header-font:  'Crimson Text', serif !default;
+$condensed-font: 'Open Sans Condensed', 'Helvetica', 'Arial', sans-serif !default;
+$serif-font: 'Crimson Text', serif !default;
+$sans-serif-font: 'PT Sans', 'Helvetica', 'Arial', sans-serif !default;
+$icon-font-family: 'FontAwesome';
+$icon-font-family-alt: 'Material Icons';
+
+
+/* FONT SIZES */
+$font-xs: 12px;
+$font-sm: 14px;
+$font-lg: 18px;
+$font-xl: 20px;

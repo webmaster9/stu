@@ -1,0 +1,80 @@
+.site-search {	
+	display: none;
+	background-color: #0F2D53;
+	padding: px(10);
+	color: #862633;
+	padding: 5px 0;
+	margin-bottom: 0;
+	@include media(">=md") {
+		padding: 56px 0 10px 0;
+		margin-bottom: -45px;
+	}
+	.search-fields {
+		position: relative;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;t
+		&:before {
+			display: block;
+			color: #fff;
+			font-family: Material Icons;
+			content: "\E8B6";
+			font-size: 24px;
+			left: px(8);
+			position: absolute;
+			top: px(2);
+			z-index: 999;
+		}
+	}
+	input[type=search] {
+		background-color: transparent;
+		border: solid 1px $grey;
+		border-radius: 0;
+		color: $white;
+		font-weight: 300;
+		padding: px(10) px(10) px(10) px(36);
+		width: 100%;
+		color: $white;
+		display: inline-block;
+		font-size: px(20);
+		&:focus {
+    		color: #fff;
+			outline: 0;
+		}
+		&::-moz-placeholder, :-moz-placeholder, &::-webkit-input-placeholder, &:-webkit-input-placeholder, &:-ms-placeholder {
+    		color: #000 !important;
+		}
+	}
+}
+
+a.search-visible {
+	color: $brand-color-one;
+}
+
+
+
+a.search-toggle-mob {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 60px;
+    text-decoration: none;
+    color: $white;
+    border: 1px solid $white;
+    width: 40px;
+    height: 40px;
+	&:hover, &:active {
+		color: $white;
+	}
+	&:before {
+		font-family: FontAwesome;
+		content: "\f002";
+		font-size: 30px;
+		position: absolute;
+		top: -3px;
+		left: 7px;
+	}
+}
+
+
+

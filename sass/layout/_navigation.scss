@@ -1,0 +1,644 @@
+.headroom {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: all .2s ease-in-out!important
+}
+
+.headroom--unpinned {
+    top: -120px!important
+}
+
+.headroom--pinned {
+    top: 0!important
+}
+
+
+.navigation {
+	display: none;
+	background-color: rgba(0,40,85,0.9);
+	@include media(">=md") {
+		position: relative;
+		display: block;
+		background-color: transparent;
+		margin-top: 0;
+	}
+}
+
+.top-nav-wrap {
+	position: relative;
+	@include media(">=md") {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		background-color: #002c63;
+		height: 100px;
+	}
+	ul.top-nav {
+		@include reset-list;
+		text-align: left;
+		margin: 0;
+		padding-top: 0;
+		@include media(">=md") {
+			padding-top: 15px;
+		}
+		li {
+			@include reset-list;
+			display: block;
+			position: relative;
+			border-bottom: solid 1px $white;
+			&:last-child {
+				border-bottom: none;
+			}
+			@include media (">=md") {
+				display: inline-block;
+				border-bottom: none;
+			}
+			a {
+				padding: 15px;
+				color: $white;
+				font-size: 16px;
+				display: block;
+				@include media(">=md") {
+					font-size: 12.5px;
+					display: inline;
+					padding: 5px 2px;
+				}
+				&:hover, &:active {
+					/*text-decoration: none;*/
+				}
+			}
+		}
+		@include media (">=lg") {
+			li + a {
+            font-size: 14px;
+            padding: 5px 2px; 
+			} 
+		}				
+		@include media (">=md") {
+			text-align: right;
+			>li+li:before {
+				padding: 0 5px;
+				color: #154f8f;
+				content: " | ";
+			}
+		}
+		@include media (">=lg"){
+		li + li:before {
+          padding: 0 5px;
+          content: " | "; 
+		  } 
+		}
+		
+	}
+}
+
+a.logo-mob {
+	display: block;
+	width: 190px;
+	position: absolute;
+	top: 10px;
+	@include media(">=md") {
+		display: none;
+	}
+	img {
+		width: 100%;
+	}
+}
+
+a.logo {
+	display: none;
+	@include media(">=md") {
+		display: block;
+		top: -95px;
+		left: 15px;
+		width: 290px;
+		position: absolute;
+		z-index: 2000;
+	}
+	img {
+		max-width: 100%;
+	}
+		@include media (">=lg") {
+		img {
+		max-width: 100%; 
+		}
+	}	
+}
+
+.main-nav-wrap {
+	height: auto;
+	position: relative;
+	@include media(">=md") {
+		position: absolute;
+		top: 100px;
+		background-color: $white;
+		width: 100%;
+		border-top: 3px solid rgba(0, 40, 85, 0.5);
+    	border-bottom: 4px solid rgba(0, 40, 85, 1.0);
+		width: 100%;
+		padding-top: 3px;
+	}	
+	.container-fluid {
+		width: 100%;
+		padding-right: 0;
+		padding-left: 0;
+	}
+	.row {
+		margin-right: 0;
+		margin-left: 0;
+
+	}
+	.col-sm-12 {
+		padding-right: 0;
+		padding-left: 0;
+
+	}
+}
+
+
+ul.main-nav {
+	font-family: 'Source Sans Pro', sans-serif;
+	background: rgba(0, 40, 85, 0.9);
+	position: relative;
+	margin-bottom: 0;
+	z-index: 1000;
+	@include media(">=md") {
+		text-align: left;
+		background: none;
+		margin-bottom: 0;
+		height: 50px;
+	}
+	@include reset-list;
+    li {
+		@include reset-list;
+		padding-left: 0;
+		position: relative;
+		border-bottom: 1px solid $white;
+		&:first-child {
+			border-top: solid px(1) $white;
+		}
+		&:last-child {
+			border-bottom: none;
+		}
+		a, a:visited {
+            display: block;
+			font-size: 20px;
+			font-weight: 700;
+			padding: 15px 15px;
+			height: 57px;
+			text-decoration: none;
+			background-color: transparent;
+			color: $white;
+			font-family: $primary-font;
+			transition: none;
+            &:hover, &:active {
+				color: $subnav-color-hover;
+				transition: none;
+            }
+			@include media(">=md") {
+				font-size: 15px;
+				height: auto;
+				color: #011f43;
+			}
+		}
+		/* second level flyout */
+		> ul {
+			display: none;
+			padding: 0;
+			&.open {
+				display: none;
+			}	
+			li {
+				a {
+					font-size: 16px;
+					padding: 20px 10px 10px 20px;
+					color: $white;
+					&:before {
+						position: relative;
+						right: 5px;
+						font-family: "FontAwesome";
+						font-weight: 300;
+						font-size: 12px;
+						content: '\f054';
+					}
+				}
+			}
+		}
+		/* li @ desktop */
+		@include media (">=md") {
+			text-align: left;
+			display: inline-block;
+			border-bottom: 1px solid transparent;
+			&:hover {
+				background-color: rgba(0, 40, 85, 0.9) !important;
+				a {
+					color: $white;
+				}
+				> ul {
+					display: block;
+					position: absolute;
+					top: 50px;
+					width: 225px;
+					left: 0;
+					z-index: 2000;
+					/*second level li width*/
+					li {
+						width: 100%;
+						background-color: rgba(0, 40, 85, 0.9) !important;
+						a {
+							height: 40px;
+							padding: 10px 10px 10px 15px;
+							font-size: 13px;
+							color: $white;
+							&:before {
+								content: '';
+							}
+							&:hover, &:active {
+								background-color: rgba(134, 38, 51, 0.7) !important;
+							}
+						}
+					}
+				}
+			}
+			&:first-child {
+				border-top: none;
+			}
+			&.has-sub {
+				&:hover {
+					background-color: rgba(0, 40, 85, 0.9) !important;
+				}	
+				> a:after { 
+					position: relative;
+					right: -5px;
+					font-family: $icon-font-family;
+					font-weight: 300;
+					content: '\f078';
+				}
+			}
+		}
+    }
+}
+
+
+
+.contact-grp {
+	width: 33%;
+	margin: 0 33% 10px 33%;
+	position: relative;
+
+	@include media(">=md") {
+		width: 150px;
+		margin: 0 0 0 0;
+		position: absolute;
+		top: 61px;
+		right: 15px;
+	}
+	z-index: 10000;
+	.contact, .register {
+		display: block;
+		width: 100%;
+		float: none;
+		border-radius: 4px;
+			@include media(">=md") {
+				margin-bottom: 2px;
+				width: 74px;
+				float: left;
+			}
+			padding: 7px;
+			background-color: rgba(186, 194, 212, 0.7);
+			text-align: center;
+			color: $white;
+			margin-bottom: 10px;
+			font-weight: 700;
+			font-size: 15px;
+			text-shadow: 1px 2px 1px #000;
+			&:hover, &:active  {
+				background-color: $white;
+				color: #1e579a;
+				text-decoration: none;
+				text-shadow: none;
+			}
+		}
+	.contact {
+		margin-right: 2px;
+		margin-bottom: 9px;
+	}
+	.apply {
+		display: block;
+		width: 100%;
+		padding: 10px;
+		background-color: #98012e;
+		border-radius: 4px;
+		text-align: center;
+		color: $white;
+		height: 50px;
+		font-weight: 700;
+		font-size: 20px;
+		text-shadow: 1px 1px 1px #000;
+		&:hover, &:active {
+			text-decoration: none;
+			background-color: #002c63;
+			color: $white;
+		}
+		@include media(">=md") {
+			width: 150px;
+			clear: both;
+		}
+	}
+}
+
+
+/*--------------------------------------------------------------
+# Mobile Nav Trigger
+--------------------------------------------------------------*/
+.mob-nav-wrap {
+	display: block;
+	@include media(">=md") {
+		display: none;
+	}
+}
+.mob-nav {
+	display: block;
+	height: 70px;
+	@include media(">=md") {
+		display: none;
+	}
+}
+
+a.nav-trigger {
+	position: absolute;
+	z-index: 3;
+	top: 15px;
+	right: 15px;
+	border: 1px solid $white;
+	height: 40px;
+	width: 40px;
+	/*border-radius: 50%;*/
+	/* replace text with image */
+	overflow: hidden;
+	white-space: nowrap;
+	color: transparent;
+	text-indent: -9999px;
+}
+
+.search-toggle {
+	display: none;
+	@include media(">=md") {
+		display: inline;
+	}
+}
+
+a.search-toggle-mob {
+	display: block;
+	position: absolute;
+	@include rem('top',10px);
+	@include rem('right',80px);
+	text-decoration: none;
+	color: $brand-color-two;
+	border: px(1) solid $brand-color-two;
+	width: px(60);
+	height: px(60);
+		&:hover, &:active {
+			color: $brand-color-two;
+		}
+		&:before {
+			font-family: Material Icons;
+			content: "\E8B6";
+			font-size: px(30);
+			position: absolute;
+			top: px(10);
+			left: px(15);
+		}
+		&.search-visible {
+
+		}
+		@include media(">=md") {
+			display: none;
+	}
+}
+.nav-trigger span, .nav-trigger span::after, .nav-trigger span::before {
+	/* this is the hamburger icon */
+	position: absolute;
+	width: 22px;
+	height: 2px;
+	background-color: $white;
+}
+.nav-trigger span {
+	/* middle line of the hamburger icon */
+	left: 50%;
+	top: 50%;
+	bottom: auto;
+	right: auto;
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	-moz-transform: translateX(-50%) translateY(-50%);
+	-ms-transform: translateX(-50%) translateY(-50%);
+	-o-transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-50%);
+	-webkit-transition: background-color 0.2s;
+	-moz-transition: background-color 0.2s;
+	transition: background-color 0.2s;
+}
+.nav-trigger span::after, .nav-trigger span::before {
+	/* top and bottom lines of the hamburger icon */
+	content: '';
+	top: 0;
+	left: 0;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-transition: -webkit-transform 0.2s;
+	-moz-transition: -moz-transform 0.2s;
+	transition: transform 0.2s;
+}
+.nav-trigger span::before {
+	-webkit-transform: translateY(-6px);
+	-moz-transform: translateY(-6px);
+	-ms-transform: translateY(-6px);
+	-o-transform: translateY(-6px);
+	transform: translateY(-6px);
+}
+.nav-trigger span::after {
+	-webkit-transform: translateY(6px);
+	-moz-transform: translateY(6px);
+	-ms-transform: translateY(6px);
+	-o-transform: translateY(6px);
+	transform: translateY(6px);
+}
+.no-touch .nav-trigger:hover ~ .stretchy-nav-bg {
+ 	box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2);
+}
+.nav-is-visible .nav-trigger span {
+ 	background-color: transparent;
+}
+.nav-is-visible .nav-trigger span::before {
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+.nav-is-visible .nav-trigger span::after {
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+
+
+/*--------------------------------------------------------------
+# Toggle Sub
+--------------------------------------------------------------*/
+ul {
+	li {
+		.toggle-sub {
+			background-color: rgba(0, 40, 85, 0.9);
+			//border-left: px(1) solid $grey;
+			color: $grey;
+			cursor: pointer;
+			display: inline-block;
+			font-size: inherit;
+			line-height: inherit;
+			padding: 11px 13px;
+			position: absolute;
+			right: 0;
+			top: 0;
+			z-index: 100;
+			/*height: px(60);*/
+			&:hover {
+				background-color: rgba(0, 40, 85, 0.9);
+			}
+			&:before {
+				font-family: $icon-font-family;
+				font-weight: 400;
+				content: '\f067';
+				font-size: 25px;
+				color: $white;
+			}
+			&.menu-visible {
+				&:before {
+					font-family: $icon-font-family;
+					font-weight: 400;
+					content: '\f068';
+					font-size: 25px;
+					color: $white;
+				}
+			}
+			@include media(">=md") {
+				display: none;
+			}
+		}
+		ul {
+			li {
+				.toggle-sub {
+					background-color: rgba(0, 40, 85, 0.9);
+				}
+				ul {
+					li {
+						.toggle-sub {
+							background-color: rgba(0, 40, 85, 0.9);
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.sidebar-menu {
+	.toggle-sub {
+		@include media(">=md") {
+				display: block;
+			}
+	}
+}
+
+
+
+.breadcrumb {
+    margin-bottom: 0;
+    list-style: none;
+    background-color: transparent;
+    border-radius: 0;
+	@include rem('padding',5px 0 0 0);
+	a, a:visited {
+		text-decoration: none;
+		font-size: 12px;
+		&:hover, &:active {
+			color: $brand-color-burg;
+			text-decoration: underline;
+		}
+	}
+	>li+li:before {
+		padding: 0 5px;
+		/*font-family: FontAwesome;
+		font-size: 10px;*/
+		color: #98012e;
+		content: "/";
+	}
+}
+
+
+
+
+
+/* sidebar nav */
+
+.sidebar-nav {
+	.section-link {
+		margin: -10px 0 15px 0;
+		a {
+			color: #98012e;
+			text-decoration: none;
+			font-size: 24px;
+			font-weight: 300;
+			&:hover, &:active {
+				text-decoration: underline;
+			}
+		}
+		a.page-mob-nav-trigger{
+			display: inline-block;
+			@include media (">=md") {
+				display: none;
+			}
+			img {
+				width: 40px;
+			}
+			&.rotated {
+				transform: rotate(180deg);
+			}
+		}
+	}
+	ul.page-sub-menu {
+		display: none;
+		list-style: none;
+		background: #e5eaf3;
+		padding: 5px;
+		@include media(">=md") {
+			display: block;
+		}
+		li { 
+			padding: 5px;
+			a {
+				font-size: 16px;
+				display: block;
+				padding: 5px;
+				transition: none;
+				color: #2d2d2d;
+				&:hover, &:active {
+					background-color: $white;
+					text-decoration: none;
+					color: #2d2d2d;
+				}
+				
+			}
+			&.active {
+				> a {
+					background-color: $white;
+				}
+			}
+		}
+	}
+}	

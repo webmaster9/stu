@@ -1,0 +1,226 @@
+.why-stu {
+	margin-bottom: 60px;
+	.whystu-stthomas { 
+		background: #002d62; 
+		.wrap {
+			align-items: stretch;
+			display: block;
+			flex-direction: row;
+			margin: 0 auto;
+			overflow: hidden;
+			width: 100%;
+			@include media(">=768px") {
+				display: flex;
+			}
+			@include media(">1180px") {
+				width: 1140px;
+			}
+			img { 
+				display: block; 
+				width: 100%;
+				height: auto;
+			}
+			.whystu-slider {
+				order: 1;
+				width: 100%;
+				float: right;
+				margin: 0px;
+				padding: 0px;
+				position: relative;
+				overflow: hidden;
+				z-index: 2;
+				display: flex;
+				@include media(">=768px") {
+					width: 10%;
+					display: block;
+					float: left;
+				}
+				li {
+					margin: 0;
+					padding: 0;
+				}
+				img {
+					cursor: pointer;
+					height: auto;
+					width: 100%;
+				}
+				.whystu-img {
+					cursor: pointer;
+					display: block;
+					position: relative;
+					float: left;
+					z-index: 1;
+					img {
+						width: 100%;
+						height: auto;
+					}
+					.whysu-bluebg {
+						background: url('../images/whysu-bluebg.png');
+						height: 100%;
+						position: absolute;
+						width: 100%;
+					}
+					.whysu-yellowbg {
+						background: url('../images/whysu-yellowbg.png');
+						display: none;
+						height: 100%;
+						position: absolute;
+						width: 100%;
+					}
+					&.active {
+						.whysu-bluebg { 
+							display: none; 
+						}
+					}
+				}
+				.title {
+					color: #fff;
+					display: block;
+					height: 0;
+					text-indent: -9999px;
+				}
+			} 
+			.whystu-slides { 
+				order: -1;
+				float: left; 
+				position: relative;
+				z-index: 1;
+				width: 100%; 
+				height: auto; 
+				margin: 0;
+				@include media(">=768px") {
+					height: 565px; 
+					width: 90%; 
+				}
+				.whystu-cont { 
+					position: relative; 
+					&.hideme { 
+						display: none; 
+					}
+					.whystu-copy {
+						color: #fff;
+						float: left; 
+						padding: 20px 20px 20px 20px;
+						width: 35%; 
+						position: relative;
+						width: 100%;
+						@include media(">500px") {
+							width: 50%;
+						}
+						@include media(">768px") {
+							width: 40%;	
+						}
+						@include media(">1180px") {
+							width: 35%;
+							padding: 20px 20px 20px 0;
+						}
+						h2 { 
+							color: #f7da93; 
+							font-size: 28px; 
+							font-weight: 500; 
+							margin-bottom: 30px; 
+							margin-bottom: 10px;
+						}
+						h3 { 
+							color: #fff; 
+							font-family: 'Source Sans Pro', sans-serif; 
+							margin: 0 0 5px; 
+						}
+						h4 {
+							color: #abbcce;
+							font-size: 18px;
+							font-weight: 300;
+							margin: 0 0 10px;
+							font-family: 'Source Sans Pro';
+						}
+						p { 
+							line-height: 21px; 
+						}
+						a, a:visited {
+							color: #f6ab0b;
+							font-size: 26px;
+							line-height: 24px;
+							font-family: 'Source Sans Pro';
+							font-weight: 300;
+							text-decoration: none;
+							&:after {
+								font-family: "FontAwesome";
+								content: "\f054";
+								font-size: 60%;
+								margin: 0 0 0 10px;
+								vertical-align: 1px;
+							}
+						}
+						.arrow-right {
+							width: 0;
+							height: 0;
+							border-top: 20px solid transparent;
+							border-bottom: 20px solid transparent;
+							border-left: 20px solid #002d62;
+							position: absolute;
+							right: -20px;
+							top: 50px;
+							z-index: 1;
+							display: none;
+							@include media(">=500px") {
+								display: block;
+							}
+						}
+					}
+					.whystu-image {
+						background: #000;
+						float: right;
+						position: relative;
+						display: none;
+						margin: 0; 
+						overflow: hidden;
+						display: none; 
+						@include media(">500px") {
+							display: block;
+							width: 50%
+						}
+						@include media(">768px") {
+							width: 60%;
+						}
+						@include media(">1180px") {
+							width: 65%;
+						}
+						&:after {
+							box-shadow: 44px 0 45px -40px #424242 inset;
+							content: "";
+							height: 100%;
+							left: 0;
+							position: absolute;
+							top: 0;
+							width: 140px;
+						}
+						img {
+							max-width: 300%; 
+							width: auto; 
+							height: auto;
+							margin-left: -150px;
+							@include media(">=768px") {
+								margin-left: -100px;
+							}
+							@include media(">=960px") {
+								margin-left: 0;
+							}
+							@include media(">=1180px") {
+								width: 100%; 
+								height: auto; 
+							}
+						}
+					}
+				}
+			}
+		}
+		ul {
+			margin: 0 0 10px 0;
+			padding: 0;
+			li {
+				color: #404244;
+				list-style-type: none;
+			}
+		}
+	}
+}

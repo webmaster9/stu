@@ -1,0 +1,132 @@
+
+// Center Block
+@mixin center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+// Display Block
+@mixin block {
+    display: block;
+}
+
+
+// Font Setting
+@mixin font-setting($family, $style, $weight) {
+    font-family: $family;
+    font-style: $style;
+    font-weight: $weight;
+}
+// Typeset
+@mixin typeset($size) {
+    font-size: px($size);
+    //line-height: leading($leading, $size);
+}
+
+// Reset List
+@mixin reset-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+
+// Truncate Text
+@mixin truncate-text {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+}
+
+// Truncate Text Scroll
+@mixin truncate-text-scroll {
+    display: block;
+    overflow: scroll;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+}
+
+// Responsive Breakpoints
+@mixin breakpoint-min-custom($size) {
+    @media only screen and (min-width: px($size)) {
+        @content
+    }
+}
+
+//@mixin breakpoint-max-custom($size) {
+//    @media only screen and (max-width: px($size)) {
+//        @content
+//    }
+//}
+//
+//@mixin breakpoint-min-lg {
+//  @media only screen and (min-width: px(1200)) {
+//    @content;
+//  }
+//}
+//
+//@mixin breakpoint-min-md {
+//  @media only screen and (min-width: px(992)) {
+//    @content;
+//  }
+//}
+//
+//@mixin breakpoint-min-sm {
+//  @media only screen and (min-width: px(768)) {
+//    @content;
+//  }
+//}
+//
+//@mixin breakpoint-min-xs {
+//  @media only screen and (min-width: px(480)) {
+//    @content;
+//  }
+//}
+//
+//@mixin breakpoint-max-lg {
+//  @media only screen and (max-width: px(1199)) {
+//    @content;
+//  }
+//}
+//
+//@mixin breakpoint-max-md {
+//  @media only screen and (max-width: px(991)) {
+//    @content;
+//  }
+//}
+//
+//@mixin breakpoint-max-sm {
+//  @media only screen and (max-width: px(767)) {
+//    @content;
+//  }
+//}
+//
+//@mixin breakpoint-max-xs {
+//  @media only screen and (max-width: px(479)) {
+//    @content;
+//  }
+//}
+
+@mixin media($conditions...) {
+  @for $i from 1 through length($conditions) {
+    $conditions: set-nth($conditions, $i, parse-expression(nth($conditions, $i)));
+  }
+
+  $branches: get-query-branches($conditions);
+  $query: '';
+
+  @each $branch in $branches {
+    @if (str-length($query) != 0) {
+      $query: $query + ', ';
+    }
+
+    $query: $query + $branch;
+  }
+
+  @media #{$query} {
+    @content;
+  }
+}

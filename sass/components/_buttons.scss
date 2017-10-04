@@ -1,0 +1,17 @@
+.give-btn {
+	display: inline-block;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: 700;
+    color: #fff;
+    border: solid 1px #98012e;
+	background-color: #98012e;
+    padding: 10px 50px;
+    border-radius: 4px;
+    width: auto;
+	&:hover, &:active {
+		color: #98012e;
+		border: solid 1px #98012e;
+		background-color: #fff;
+	}
+}

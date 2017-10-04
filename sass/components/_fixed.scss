@@ -1,0 +1,44 @@
+.fixed {
+	background-image: url(../images/bg-fixed-hm.jpg);
+	background-attachment: inherit;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 100%;
+    background-size: cover;
+    color: #eab47e;
+	position: relative;
+	padding: 60px 0;
+	font-size: 24px;
+	@include media(">=md") {
+		background-attachment: fixed;
+		padding: 150px 0;
+	} 
+	h2 {
+		color: $white;
+		text-align: center;
+		margin: 0 0 20px 0;
+		font-size: 64px;
+		font-weight: 700;
+	}
+	h3 {
+		color: $white;
+		text-align: center;
+	}
+	a {
+		display: inline-block;
+		font-size: 20px;
+		text-decoration: none;
+		font-weight: 700;
+		color: $white;
+		background-color: rgba(255,255,255,0.15);
+		border: solid 2px #FFF;
+		padding: 10px 50px;
+		border-radius: 4px;
+		width: auto;
+		margin-top: 50px;
+		&:hover, &:active {
+			color: #98012e;
+			background-color: #FFF;
+		}
+	}
+}

@@ -1,0 +1,53 @@
+.footer {
+	.top {
+		background: #8e8e8e; /* For browsers that do not support gradients */
+		background: -webkit-linear-gradient(#8e8e8e, #FFFFFF); /* For Safari 5.1 to 6.0 */
+		background: -o-linear-gradient(#8e8e8e, #FFFFFF); /* For Opera 11.1 to 12.0 */
+		background: -moz-linear-gradient(#8e8e8e, #FFFFFF); /* For Firefox 3.6 to 15 */
+		background: linear-gradient(#8e8e8e, #FFFFFF); /* Standard syntax */
+		padding: 20px 0;
+		ul.social-links {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			li {
+				margin-right: 10px;
+				display: inline-block;
+				a {
+					display: inline-block;
+					height: 40px;
+					width: 40px;
+					line-height: 40px;
+					text-align: center;
+					border-radius: 40px;
+					font-size:  20px;
+					background-color: #012f61;
+					color: $white;
+				}
+			}
+			span.followus {
+				font-size: 16px;
+				font-weight: 700;
+				text-transform: uppercase;
+				color: #4f4f4f;
+			}
+		}
+	}
+	.bottom {
+		background-color: #011f43;
+		padding: 20px 0;
+		.address {
+			display: block;
+			color: $white;
+			font-weight: 300;
+			margin-bottom: 10px;
+			a {
+				color: #e0c88c;
+				font-weight: 700;
+			}
+		}
+		.copyright {
+			color: #337ab8;
+		}
+	}
+}

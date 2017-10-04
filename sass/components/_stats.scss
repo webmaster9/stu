@@ -1,0 +1,114 @@
+.stats {
+	background-image: url(../images/bg-wave.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	color: #fff;
+	font-size: 24px;
+	min-height: 330px;
+	padding: 60px 0;
+	font-weight: 300;
+	@include media(">=md") {
+		padding: 100px 0;
+	}
+	h2 {
+		color: #d7c48d;
+		font-weight: 700;
+		font-size: 36px;
+	}
+	a {
+		display: inline-block;
+		font-size: 22px;
+		text-decoration: none;
+		font-weight: 700;
+		color: $white;
+		background-color: rgba(255, 255, 255, 0.2);
+		border: solid 1px #FFF;
+		padding: 10px 50px;
+		border-radius: 4px;
+		width: 100%;
+		text-align: center;
+		margin-top: 50px;
+		margin-bottom: 20px;
+		&:hover, &:active {
+			color: #98012e;
+			background-color: #FFF;
+		}
+		&:after {
+			font-family: "FontAwesome";
+			content: "\f054";
+			font-size: 60%;
+			margin: 0 0 0 6px;
+			vertical-align: 2px;
+			position: relative;
+			z-index: 10;
+		}
+		@include media(">=md") {
+			font-size: 26px;
+			width: auto;
+		}
+	}
+	.pie {
+		background: #021c41;
+		box-shadow: -2px 2px 10px 0 rgba(0,0,0,0.5);
+		padding: 20px;
+		border-radius: 400px;
+		text-align: center;
+		height: 265px;
+		width: 265px;
+		@include media(">=sm") {
+			height: 340px;
+			width: 340px;
+			padding: 40px;
+		}
+		@include media(">=md") {
+			height: 380px;
+			width: 380px;
+			padding: 60px;
+		}
+		margin: 0px auto;
+		h2 {
+			font-size: 45px;
+			font-weight: 700;
+			color: #ca0039;
+			margin: 0;
+			@include media(">=sm") {
+				font-size: 70px;
+			}
+			@include media(">=md") {
+				font-size: 80px;
+			}
+		}
+		h3 {
+			font-size: 18px;
+			font-weight: 300;
+			margin-top: 10px;
+			margin-bottom: 30px;
+			color: $white;
+			@include media(">=sm") {
+				font-size: 20px;
+			}
+			@include media(">=md") {
+				font-size: 26px;
+			}
+		}
+		a {
+			display: inline;
+			border: none;
+			font-size: 20px;
+			font-weight: 300;
+			padding: 0;
+			color: #d7c48d;
+			background-color: rgba(255, 255, 255, 0);
+			text-decoration: none;
+			&:hover, &:active {
+				background-color: transparent;
+				color: #FFF;
+			}
+			&:after {
+				content: "";
+			}
+		}
+	}
+}
+

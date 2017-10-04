@@ -1,0 +1,40 @@
+html {
+	font-size: 100%;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #5b5b5b; 
+	font-size: 16px; }
+
+a {
+	transition: all 0.3s ease-in-out;
+	color: #98012e;
+	&:hover, &:active {
+		color: #98012e;
+		text-decoration: underline;
+	}
+}
+
+.screen-reader-text {
+    left: -9999em;
+    position: absolute;
+    top: -9999em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: #0f2d53;
+}
+
+h1 {
+    font-size: 28px;
+    line-height: 36px;
+    letter-spacing: normal;
+    margin-top: 8px;
+    margin-bottom: 20px;
+	font-weight: 700;
+}
+
+.page-content {
+	font-family: 'Open Sans', sans-serif;
+}
