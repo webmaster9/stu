@@ -1,0 +1,32 @@
+
+
+
+/* Backgrounds */
+
+.backgroundimg-fixed {
+	background-image: url(../images/bgi-fixed.jpg);
+	}
+	
+.mas-wrap {
+	background: url(../images/stu-feature-bg.jpg) no-repeat bottom center !important;
+	}
+	
+.mas-wrap2 {
+	background: url(../images/school-banner-bg.jpg) no-repeat center center;
+	/* background-attachment: fixed; */
+		} 
+    
+.stats {
+	background-image: url(../images/bg-wave.jpg) !important;
+	}
+	
+	}
+.quick-facts-wrap .quick-facts .quick-facts-slide .quickfactsnavmobile .quickNavSelected {
+    background-image: url(../images/quickfacts-nav.jpg);
+	}
+.why-stu .whystu-stthomas .wrap .whystu-slider .whystu-img .whysu-bluebg {
+    background: url("../images/whysu-bluebg.png");
+	}
+.why-stu .whystu-stthomas .wrap .whystu-slider .whystu-img .whysu-yellowbg {
+    background: url("../images/whysu-yellowbg.png");
+	}	

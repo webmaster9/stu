@@ -61,7 +61,7 @@
 				font-size: 16px;
 				display: block;
 				@include media(">=md") {
-					font-size: 12.5px;
+					font-size: 14px;
 					display: inline;
 					padding: 5px 2px;
 				}
@@ -156,6 +156,38 @@ a.logo {
 
 	}
 }
+
+
+
+.bottom-nav-wrap {
+	padding-top: 5px;
+	padding-bottom: 10px;
+	margin-bottom: 0px;
+	text-align: center;
+			ul {
+				text-align: center;
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+			}
+		}
+	@media screen and (min-width: 992px) {
+		.bottom-nav-wrap {
+			padding-top: 55px;
+			margin-left: -60px;
+			text-align: left;
+			}
+		}
+
+.bottom-nav li {
+	display: inline-block; 
+	padding: 5px;		
+		}
+.bottom-nav-wrap h1 {
+	line-height: 28px !important;	
+	margin: 10px;
+		}
+
 
 
 ul.main-nav {
