@@ -1,0 +1,146 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.undergrad-section {
+	margin: 25px 0;
+	a {
+		text-decoration: none;
+	}
+	h1 {
+	}
+	li {
+		font-size: 14pt;
+		list-style-type: none;
+		width: 100%;
+		padding: 10px 0 10px 10px;
+		border-bottom: 1px solid rgba(0,44,99,0.7);
+			&:hover, &:active {
+				color: $white;
+				background-color: rgba(0,44,99,1);
+				border: 1px solid rgba(0,44,99,0.7);
+		}
+	}
+	p {
+		font-size: 14pt;
+	}
+	.programs {
+		margin: 0;
+			h1 {
+				font-size: 20pt !important;
+		}
+	}
+	.content {
+		margin: 25px 0;
+		verticle-align: middle;
+			h1 {
+				font-size: 18pt !important;
+		}
+			p {
+				padding: 0 10px;
+		}
+			a {
+				display: block;
+				color: rgba(0,44,99,1);
+				padding: 10px 20px;
+				border: solid 2px rgba(0,44,99,1);
+				background-color: rgba(0,44,99,0.1);
+				border-radius: 4px;
+				text-align: center;
+				font-size: 22px;
+				width: 200px;
+				margin: 40px auto 0 auto;
+					&:hover, &:active {
+						color: $white;
+						padding: 10px 20px;
+						border: solid 2px rgba(0,44,99,1);
+						background-color: rgba(0,44,99,1);
+						border-radius: 4px;
+						text-align: center;
+						font-size: 22px;
+						width: 200px;
+						margin: 40px auto 0 auto;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+	
+.graduate-section {
+	margin: 50px 0;
+	a {
+		text-decoration: none;
+	}
+	h1 {
+	}
+	li {
+		font-size: 14pt;
+		list-style-type: none;
+		width: 100%;
+		padding: 10px 0 10px 10px;
+		border-bottom: 1px solid rgba(0,44,99,0.7);
+			&:hover, &:active {
+				color: $white;
+				background-color: rgba(0,44,99,1);
+				border: 1px solid rgba(0,44,99,0.7);
+		}
+	}
+	p {
+		font-size: 14pt;
+	}
+	.programs {
+		margin: 0;
+			h1 {
+				font-size: 20pt !important;
+		}
+	}
+	.content {
+		margin: 50px 0;
+			h1 {
+				font-size: 18pt !important;
+		}
+			p {
+				padding: 0 10px;
+		}
+			a {
+				display: block;
+				color: rgba(0,44,99,1);
+				padding: 10px 20px;
+				border: solid 2px rgba(0,44,99,1);
+				background-color: rgba(0,44,99,0.1);
+				border-radius: 4px;
+				text-align: center;
+				font-size: 22px;
+				width: 200px;
+				margin: 40px auto 0 auto;
+					&:hover, &:active {
+						color: $white;
+						padding: 10px 20px;
+						border: solid 2px rgba(0,44,99,1);
+						background-color: rgba(0,44,99,1);
+						border-radius: 4px;
+						text-align: center;
+						font-size: 22px;
+						width: 200px;
+						margin: 40px auto 0 auto;
+			}
+		}
+	}
+}
