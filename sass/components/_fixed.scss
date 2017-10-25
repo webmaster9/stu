@@ -1,5 +1,49 @@
+.fixed {
+	background-attachment: inherit;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 100%;
+    background-size: cover;
+    color: #eab47e;
+	position: relative;
+	padding: 60px 0;
+	font-size: 24px;
+	@include media(">=md") {
+		background-attachment: fixed;
+		padding: 150px 0;
+	} 
+	h2 {
+		color: $white;
+		text-align: center;
+		margin: 0 0 20px 0;
+		font-size: 64px;
+		font-weight: 700;
+	}
+	h3 {
+		color: $white;
+		text-align: center;
+	}
+	a {
+		display: inline-block;
+		font-size: 20px;
+		text-decoration: none;
+		font-weight: 700;
+		color: $white;
+		background-color: rgba(255,255,255,0.15);
+		border: solid 2px #FFF;
+		padding: 10px 50px;
+		border-radius: 4px;
+		width: auto;
+		margin-top: 50px;
+		&:hover, &:active {
+			color: #98012e;
+			background-color: #FFF;
+		}
+	}
+}
+
 .fixed-red {
-	background-color: rgba(134, 38, 51, .9);
+	background-color: rgba(134, 38, 51, .75);
 	width: 100%;
     background-size: cover;
     color: #eab47e;
@@ -47,7 +91,7 @@
 
 
 .fixed-blue {
-	background-color: rgba(0,44,99, .8);
+	background-color: rgba(0,44,99, .7);
 	width: 100%;
     background-size: cover;
     color: #eab47e;
@@ -58,10 +102,34 @@
 		background-attachment: fixed;
 		padding: 150px 0;
 	} 
+	p {
+		color: white;
+		font-family: "Playfair Display";
+		font-weight: 500;
+		font-style: italic;
+			@include media("<=md") {
+				font-size: 21px;
+		}
+			@include media("<=sm") {
+				font-size: 19px;
+		}
+	}
 	h1 {
 		color: $white;
 		font-size: 28pt;
 		font-weight: 700;
+		font-family: "Playfair Display";
+		padding-left: 145px; 
+		margin-bottom: -25px;
+			@include media("<=md") {
+				padding-left: 75px; 
+				margin-bottom: -25px;
+				font-size: 24pt;
+			@include media("<=sm") {
+				padding-left: 50px; 
+				font-size: 21pt;
+		}
+		}
 	}
 	h2 {
 		color: $white;
@@ -86,9 +154,45 @@
 		border-radius: 4px;
 		width: auto;
 		margin-top: 50px;
-		&:hover, &:active {
-			color: #0f2d53;
-			background-color: #FFF;
+			&:hover, &:active {
+				color: #0f2d53;
+				background-color: #FFF;
+		}
+	}
+	img {
+		height: 100px;
+		width: auto;
+			@include media("<=md") {
+				height: 50px;
+		}
+			@include media("<=sm") {
+				height: 30px;
+		}
+	}	
+	.leftquote {
+		float: left;
+		margin-top: -10px;
+			@include media("<=md") {
+				margin-top: 10px;
+		}
+	}
+	.rightquote {
+		float: right;
+		margin-top: -60px;
+			@include media("<=md") {
+				margin-top: -20px;
+		}
+	}
+	.padmarg25 {
+		padding: 0px 30px 0px 30px;
+		margin: 0px 30px 0px 30px;
+			@include media("<=md") {
+				padding: 0px 15px 0px 15px;
+				margin: 0px 15px 0px 15px;
+		}
+			@include media("<=sm") {
+				padding: 0px 10px 0px 10px;
+				margin: 0px 10px 0px 10px;
 		}
 	}
 }

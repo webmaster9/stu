@@ -1,35 +1,40 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .undergrad-section {
-	margin: 25px 0;
+	padding: 50px 0;
 	a {
 		text-decoration: none;
+		font-weight: 500;
 	}
 	h1 {
 	}
 	li {
+		color: #98012e;
 		font-size: 14pt;
+		font-weight: 600;
 		list-style-type: none;
 		width: 100%;
-		padding: 10px 0 10px 10px;
+		padding: 0px 7px 7px 7px;
 		border-bottom: 1px solid rgba(0,44,99,0.7);
+			a {
+				display: block;
+				padding: 10px 10px 10px 10px;
+			}
+			.fa {
+				margin-left: 15px;
+				font-size: 12pt;				
+			}
 			&:hover, &:active {
-				color: $white;
-				background-color: rgba(0,44,99,1);
-				border: 1px solid rgba(0,44,99,0.7);
+					a {
+						color: rgba(0,44,99,1); 
+						/* background-color: rgba(0,44,99,1); */
+						border-left: 2px solid rgba(0,44,99,1);
+							-webkit-transition: all 0.001s ease-in-out;
+							-moz-transition: all 0.001s ease-in-out;
+							-o-transition: all 0.001s ease-in-out;
+							transition: all 0.001s ease-in-out;
+					}
+					.fa {
+						padding-left: 5px;
+					}
 		}
 	}
 	p {
@@ -42,10 +47,12 @@
 		}
 	}
 	.content {
-		margin: 25px 0;
-		verticle-align: middle;
+		padding-top: 40px;
+			@include media("<=md") {
+				padding-top: 15px;
+		}
 			h1 {
-				font-size: 18pt !important;
+				font-size: 22pt !important;
 		}
 			p {
 				padding: 0 10px;
@@ -59,6 +66,7 @@
 				border-radius: 4px;
 				text-align: center;
 				font-size: 22px;
+				font-weight: 700;
 				width: 200px;
 				margin: 40px auto 0 auto;
 					&:hover, &:active {
@@ -73,68 +81,94 @@
 						margin: 40px auto 0 auto;
 			}
 		}
-	}
+	}	
 }
-
-
-
-
-
-
-
 	
 .graduate-section {
-	margin: 50px 0;
+	background-color: rgba(134, 38, 51, .75);
+	padding: 50px 0;
 	a {
 		text-decoration: none;
 	}
 	h1 {
+		color: $white;
+	}
+	ul {
+		padding: 0px;
 	}
 	li {
+		color: $white;
 		font-size: 14pt;
 		list-style-type: none;
 		width: 100%;
-		padding: 10px 0 10px 10px;
-		border-bottom: 1px solid rgba(0,44,99,0.7);
+		padding: 0px 7px 7px 7px;
+		margin-bottom: 10px;
+		border-bottom: 1px solid $white;
+			a {
+				display: block;
+				padding: 10px 10px 10px 10px;
+			}
+			.fa {
+				margin-left: 15px;
+				font-size: 12pt;
+				
+			}
 			&:hover, &:active {
-				color: $white;
-				background-color: rgba(0,44,99,1);
-				border: 1px solid rgba(0,44,99,0.7);
+					a {
+						color: $white;
+						/* background-color: rgba(0,44,99,1); */
+						border-left: 2px solid $white;
+							-webkit-transition: all 0.001s ease-in-out;
+							-moz-transition: all 0.001s ease-in-out;
+							-o-transition: all 0.001s ease-in-out;
+							transition: all 0.001s ease-in-out;
+					}
+					.fa {
+						padding-left: 5px;
+			}
 		}
 	}
 	p {
 		font-size: 14pt;
+		color: $white;
 	}
 	.programs {
 		margin: 0;
 			h1 {
-				font-size: 20pt !important;
+				font-size: 22pt !important;
 		}
+			a {
+				color: $white;
+		}	
 	}
 	.content {
-		margin: 50px 0;
+		padding-top: 40px;
+			@include media("<=md") {
+				padding-top: 15px;
+		}
 			h1 {
-				font-size: 18pt !important;
+				font-size: 22pt !important;
 		}
 			p {
 				padding: 0 10px;
 		}
 			a {
 				display: block;
-				color: rgba(0,44,99,1);
+				color:  rgba(255,255,255,1);
 				padding: 10px 20px;
-				border: solid 2px rgba(0,44,99,1);
-				background-color: rgba(0,44,99,0.1);
+				border: solid 2px  rgba(255,255,255,1);
+				background-color:  rgba(255,255,255,0.15);
 				border-radius: 4px;
 				text-align: center;
 				font-size: 22px;
+				font-weight: 700;
 				width: 200px;
 				margin: 40px auto 0 auto;
 					&:hover, &:active {
-						color: $white;
+						color: #98012e;
 						padding: 10px 20px;
-						border: solid 2px rgba(0,44,99,1);
-						background-color: rgba(0,44,99,1);
+						border: solid 2px $white;
+						background-color: $white;
 						border-radius: 4px;
 						text-align: center;
 						font-size: 22px;

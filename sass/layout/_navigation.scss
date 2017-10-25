@@ -61,12 +61,17 @@
 				font-size: 16px;
 				display: block;
 				@include media(">=md") {
-					font-size: 14px;
+					font-size: 12.5px;
 					display: inline;
-					padding: 5px 2px;
+					padding: 5px 0px;				
 				}
 				&:hover, &:active {
 					/*text-decoration: none;*/
+				}
+				@include media(">=lg") {
+					font-size: 14px;
+					display: inline;
+					padding: 5px 2px;
 				}
 			}
 		}
@@ -136,7 +141,7 @@ a.logo {
 		background-color: $white;
 		width: 100%;
 		border-top: 3px solid rgba(0, 40, 85, 0.5);
-    	border-bottom: 4px solid rgba(0, 40, 85, 1.0);
+    	border-bottom: 3px solid rgba(0, 40, 85, 1.0);
 		width: 100%;
 		padding-top: 3px;
 	}	
@@ -156,38 +161,6 @@ a.logo {
 
 	}
 }
-
-
-
-.bottom-nav-wrap {
-	padding-top: 5px;
-	padding-bottom: 10px;
-	margin-bottom: 0px;
-	text-align: center;
-			ul {
-				text-align: center;
-				list-style-type: none;
-				margin: 0;
-				padding: 0;
-			}
-		}
-	@media screen and (min-width: 992px) {
-		.bottom-nav-wrap {
-			padding-top: 55px;
-			margin-left: -60px;
-			text-align: left;
-			}
-		}
-
-.bottom-nav li {
-	display: inline-block; 
-	padding: 5px;		
-		}
-.bottom-nav-wrap h1 {
-	line-height: 28px !important;	
-	margin: 10px;
-		}
-
 
 
 ul.main-nav {
@@ -378,6 +351,51 @@ ul.main-nav {
 			width: 150px;
 			clear: both;
 		}
+	}
+}
+
+
+
+/*--------------------------------------------------------------
+# Bottom Header Nav
+--------------------------------------------------------------*/
+
+.bottom-nav {
+	a {
+		padding: 0px 8px 0px 5px;	
+	}
+	li {
+		display: inline; 
+			.rightborder {
+				border-right: 1px solid #98012e;
+		}
+	}
+}
+
+.bottom-nav-wrap h1 {
+	line-height: 28px !important;	
+	margin: 10px;
+}
+
+.bottom-nav-wrap {
+	border-bottom: 2px solid #002855;
+	padding-top: 5px;
+	padding-bottom: 10px;
+	margin-bottom: 0px;
+	text-align: center;
+		ul {
+			text-align: center;
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+	}
+}
+
+@media screen and (min-width: 992px) {
+	.bottom-nav-wrap {
+		padding-top: 55px;
+		margin-left: -60px;
+		text-align: left;
 	}
 }
 
