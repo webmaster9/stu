@@ -6,6 +6,9 @@
 .backgroundimg-fixed {
 	background-image: url(../images/bgi-fixed.jpg);
 	}
+.backgroundimg-city {
+	background-image: url(../images/bgi-city.jpg);
+	}
 	
 .mas-wrap {
 	background: url(../images/stu-feature-bg.jpg) no-repeat bottom center !important;
